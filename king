@@ -1,0 +1,179 @@
+1. Create a tar File in Linux
+The below example of the tar command will create a tar archive file tecmint-14-09-12.tar for a directory /home/tecmint in the current working directory.
+
+See the example of the tar command in action.
+
+# tar -cvf tecmint-14-09-12.tar /home/tecmint/
+
+/home/tecmint/
+/home/tecmint/cleanfiles.sh
+/home/tecmint/openvpn-2.1.4.tar.gz
+/home/tecmint/tecmint-14-09-12.tar
+/home/tecmint/phpmyadmin-2.11.11.3-1.el5.rf.noarch.rpm
+/home/tecmint/rpmforge-release-0.5.2-2.el5.rf.i386.rpm
+Let’s discuss each option used in the above tar command to create a tar archive file.
+
+c – Creates a new .tar archive file.
+v – Verbosely show the .tar file progress.
+f – File name type of the archive file.
+2. Create a tar.gz File in Linux
+To create a compressed gzip archive file we use the option z. For example, the below command will create a compressed MyImages-14-09-12.tar.gz file for the directory /home/MyImages. (Note: tar.gz and tgz both are similar).
+
+# tar cvzf MyImages-14-09-12.tar.gz /home/MyImages
+OR
+# tar cvzf MyImages-14-09-12.tgz /home/MyImages
+
+/home/MyImages/
+/home/MyImages/Sara-Khan-and-model-Priyanka-Shah.jpg
+/home/MyImages/RobertKristenviolent101201.jpg
+/home/MyImages/Justintimerlake101125.jpg
+/home/MyImages/Mileyphoto101203.jpg
+/home/MyImages/JenniferRobert101130.jpg
+/home/MyImages/katrinabarbiedoll231110.jpg
+/home/MyImages/the-japanese-wife-press-conference.jpg
+/home/MyImages/ReesewitherspoonCIA101202.jpg
+/home/MyImages/yanaguptabaresf231110.jpg
+3. Create a tar.bz2 File in Linux
+The bz2 feature compresses and creates an archive file less than the size of the gzip. The bz2 compression takes more time to compress and decompress files than gzip, which takes less time.
+
+To create a highly compressed tar file we use the option j. The following example command will create a Phpfiles-org.tar.bz2 file for a directory /home/php. (Note: tar.bz2 and tbz is similar to tb2).
+
+# tar cvfj Phpfiles-org.tar.bz2 /home/php
+OR
+# tar cvfj Phpfiles-org.tar.tbz /home/php
+OR 
+# tar cvfj Phpfiles-org.tar.tb2 /home/php
+
+/home/php/
+/home/php/iframe_ew.php
+/home/php/videos_all.php
+/home/php/rss.php
+/home/php/index.php
+/home/php/vendor.php
+/home/php/video_title.php
+/home/php/report.php
+/home/php/object.html
+/home/php/video.php
+4. Extract Tar File in Linux
+To untar or extract a tar file, just issue the following command using option x (extract). For example, the below command will untar the file public_html-14-09-12.tar in the present working directory.
+
+If you want to untar in a different directory then use option -C (specified directory).
+
+## Untar files in Current Directory ##
+# tar -xvf public_html-14-09-12.tar
+
+## Untar files in specified Directory ##
+# tar -xvf public_html-14-09-12.tar -C /home/public_html/videos/
+
+/home/public_html/videos/
+/home/public_html/videos/views.php
+/home/public_html/videos/index.php
+/home/public_html/videos/logout.php
+/home/public_html/videos/all_categories.php
+/home/public_html/videos/feeds.xml
+5. Extract tar.gz File in Linux
+
+freestar
+To uncompress the tar.gz archive file, just run the following command. If we would like to untar in different directories, just use option -C and the directory path, as shown in the above example.
+
+# tar -xvf thumbnails-14-09-12.tar.gz
+
+/home/public_html/videos/thumbnails/
+/home/public_html/videos/thumbnails/katdeepika231110.jpg
+/home/public_html/videos/thumbnails/katrinabarbiedoll231110.jpg
+/home/public_html/videos/thumbnails/onceuponatime101125.jpg
+/home/public_html/videos/thumbnails/playbutton.png
+/home/public_html/videos/thumbnails/ReesewitherspoonCIA101202.jpg
+/home/public_html/videos/thumbnails/snagItNarration.jpg
+/home/public_html/videos/thumbnails/Minissha-Lamba.jpg
+/home/public_html/videos/thumbnails/Lindsaydance101201.jpg
+/home/public_html/videos/thumbnails/Mileyphoto101203.jpg
+6. Extract tar.bz2 File in Linux
+To uncompress the highly compressed tar.bz2 file, just use the following command. The below example command will untar all the .flv files from the archive file.
+
+# tar -xvf videos-14-09-12.tar.bz2
+
+/home/public_html/videos/flv/katrinabarbiedoll231110.flv
+/home/public_html/videos/flv/BrookmuellerCIA101125.flv
+/home/public_html/videos/flv/dollybackinbb4101125.flv
+/home/public_html/videos/flv/JenniferRobert101130.flv
+/home/public_html/videos/flv/JustinAwardmovie101125.flv
+/home/public_html/videos/flv/Lakme-Fashion-Week.flv
+/home/public_html/videos/flv/Mileyphoto101203.flv
+/home/public_html/videos/flv/Minissha-Lamba.flv
+7. List Tar Files in Linux
+To list the contents of the tar archive file, just run the following command with option t (list content). The below command will list the content of the uploadprogress.tar file.
+
+# tar -tvf uploadprogress.tar
+
+-rw-r--r-- chregu/staff   2276 2011-08-15 18:51:10 package2.xml
+-rw-r--r-- chregu/staff   7877 2011-08-15 18:51:10 uploadprogress/examples/
+index.php
+-rw-r--r-- chregu/staff   1685 2011-08-15 18:51:10 uploadprogress/examples/
+server.php
+-rw-r--r-- chregu/staff   1697 2011-08-15 18:51:10 uploadprogress/examples/
+info.php
+-rw-r--r-- chregu/staff    367 2011-08-15 18:51:10 uploadprogress/
+config.m4
+-rw-r--r-- chregu/staff    303 2011-08-15 18:51:10 uploadprogress/
+config.w32
+-rw-r--r-- chregu/staff   3563 2011-08-15 18:51:10 uploadprogress/
+php_uploadprogress.h
+-rw-r--r-- chregu/staff  15433 2011-08-15 18:51:10 uploadprogress/
+uploadprogress.c
+-rw-r--r-- chregu/staff   1433 2011-08-15 18:51:10 package.xml
+8. List tar.gz Files in Linux
+Use the following command to list the content of the tar.gz file.
+
+# tar -tvf staging.tecmint.com.tar.gz
+
+-rw-r--r-- root/root   0 2012-08-30 04:03:57 staging.tecmint.com-access_log
+-rw-r--r-- root/root   587 2012-08-29 18:35:12 staging.tecmint.com-access_log.1
+-rw-r--r-- root/root   156 2012-01-21 07:17:56 staging.tecmint.com-access_log.2
+-rw-r--r-- root/root   156 2011-12-21 11:30:56 staging.tecmint.com-access_log.3
+-rw-r--r-- root/root   156 2011-11-20 17:28:24 staging.tecmint.com-access_log.4
+-rw-r--r-- root/root   0 2012-08-30 04:03:57 staging.tecmint.com-error_log
+-rw-r--r-- root/root   981 2012-08-29 18:35:12 staging.tecmint.com-error_log.1
+-rw-r--r-- root/root   211 2012-01-21 07:17:56 staging.tecmint.com-error_log.2
+-rw-r--r-- root/root   211 2011-12-21 11:30:56 staging.tecmint.com-error_log.3
+-rw-r--r-- root/root   211 2011-11-20 17:28:24 staging.tecmint.com-error_log.4
+9. List tar.bz2 Files in Linux
+To list the content of the tar.bz2 file, issue the following command.
+
+# tar -tvf Phpfiles-org.tar.bz2
+
+drwxr-xr-x root/root         0 2012-09-15 03:06:08 /home/php/
+-rw-r--r-- root/root      1751 2012-09-15 03:06:08 /home/php/iframe_ew.php
+-rw-r--r-- root/root     11220 2012-09-15 03:06:08 /home/php/videos_all.php
+-rw-r--r-- root/root      2152 2012-09-15 03:06:08 /home/php/rss.php
+-rw-r--r-- root/root      3021 2012-09-15 03:06:08 /home/php/index.php
+-rw-r--r-- root/root      2554 2012-09-15 03:06:08 /home/php/vendor.php
+-rw-r--r-- root/root       406 2012-09-15 03:06:08 /home/php/video_title.php
+-rw-r--r-- root/root      4116 2012-09-15 03:06:08 /home/php/report.php
+-rw-r--r-- root/root      1273 2012-09-15 03:06:08 /home/php/object.html
+10. Extract a File from Tar in Linux
+To extract a single file called cleanfiles.sh from cleanfiles.sh.tar use the following command.
+
+# tar -xvf cleanfiles.sh.tar cleanfiles.sh
+OR
+# tar --extract --file=cleanfiles.sh.tar cleanfiles.sh
+
+cleanfiles.sh
+11. Extract a File from tar.gz in Linux
+To extract a single file tecmintbackup.xml from the tecmintbackup.tar.gz archive file, use the command as follows.
+
+# tar -zxvf tecmintbackup.tar.gz tecmintbackup.xml
+OR
+# tar --extract --file=tecmintbackup.tar.gz tecmintbackup.xml
+
+tecmintbackup.xml
+12. Extract a File from tar.bz2 in Linux
+
+freestar
+To extract a single file called index.php from the file Phpfiles-org.tar.bz2 use the following option.
+
+# tar -jxvf Phpfiles-org.tar.bz2 home/php/index.php
+OR
+# tar --extract --file=Phpfiles-org.tar.bz2 /home/php/index.php
+
+/home/php/index.php
